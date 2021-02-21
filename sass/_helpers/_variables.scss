@@ -1,0 +1,15 @@
+$theme-colors: (
+  "primary": #F15E33,
+  "secondary": #00BE1C,
+  "light": #828282,
+  "dark": #424242,
+  "linkColor": #10A0D6,
+  "veryLight": #FAFAFA
+);
+
+$body-color: map-get($theme-colors,light);
+$link-color: map-get($theme-colors,linkColor);
+$input-group-addon-bg: transparent;
+$font-family-base: Arial, Helvetica, sans-serif;
+$input-color: map-get($theme-colors,dark);
+$input-placeholder-color: $input-color;

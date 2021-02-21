@@ -1,0 +1,84 @@
+.donation-widget{
+    max-width:316px;
+    padding:15px 0;
+    margin:0 auto;
+    position:relative;
+    .days-remaining{
+        font-style:normal;
+    }
+    .progress-remaining-tooltip{
+        background:map-get($theme-colors,dark);
+        color:$white;
+        padding:12px;
+        text-align: center;
+        border-radius:4px;
+        position:relative;
+        margin-bottom:14px;
+        &:after{
+            content:"";
+            position:absolute;
+            bottom:-8px;
+            right:30px;
+            width: 0; 
+            height: 0; 
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 8px solid map-get($theme-colors,dark);
+        }
+    }
+    .card{
+        border-radius:0;
+        box-shadow:0 2px 5px rgba(map-get($theme-colors,light), 0.2);
+        .card-header{
+            padding:0;
+            background:$white;
+        }
+        .progress{
+            border-radius:0;
+            background:$white;
+            box-shadow:inset 0 0 25px rgba(map-get($theme-colors,light), 0.1);
+        }
+    }
+    .donation-form{
+        .price-field{
+            position:relative;
+            font-weight:700;
+            &:before{
+                content: "$";
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: inherit;
+                position: absolute;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                padding: 0 0 0 15px;
+                font-size: 20px;
+                color:map-get($theme-colors,light);
+            }
+            .form-control{
+                padding-left:32px;
+                font-weight: inherit;
+            }
+        }
+    }
+    .custom-grid-padding{
+        margin:0 -8px;
+        .col{
+            padding:0 8px;
+        }
+        [class^="col-"]{
+            @extend .col;
+        }
+    }
+
+    .btn-outline{
+        color: color-yiq(theme-color("dark"));
+    }
+    footer{
+        padding:15px 0;
+        .btn-veryLight{
+            border:1px solid rgba(0,0,0,.125);
+            color:map-get($theme-colors,light);
+        }
+    }
+}
